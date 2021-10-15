@@ -1,0 +1,103 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: #262626FF;
+}
+.skillBox{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	height: 50px;
+	width: 400px;
+	border-radius: 50px;
+	box-shadow: 1px 1px 40px black;
+	cursor: pointer;
+	animation: anime 2s ease forwards;
+}
+.html{
+	position: relative;
+	height: 100%;
+	width: 45%;
+	background-color: #F40A4DFF;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+.css{
+	position: relative;
+	height: 100%;
+	width: 25%;
+	background-color: dodgerblue;
+}
+.javascript{
+	position: relative;
+	height: 100%;
+	width: 20%;
+	background-color: orange;
+}
+.php{
+	position: relative;
+	height: 100%;
+	width: 10%;
+	background-color: limegreen;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+span::after{
+	content: '';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	height: 30px;
+	width: 160px;
+	bottom: 60px;
+	left: 50%;
+	transform: translate(-50%);
+	font-size: 20px;
+	font-weight: 600;
+	font-family: sans-serif;
+	color: white;
+	transition: 0.5s;
+	border-radius: 50px;
+	opacity: 0;
+}
+.html::after{
+	content: 'HTML 45%';
+	background-color: #F40A4DFF;
+	box-shadow: 1px 1px 40px #F40A4DFF;
+}
+.css::after{
+	content: 'CSS 25%';
+	background-color: dodgerblue;
+	box-shadow: 1px 1px 40px dodgerblue;
+}
+.javascript::after{
+	content: 'JavaScript 20%';
+	background-color: orange;
+	box-shadow: 1px 1px 40px orange;
+}
+.php::after{
+	content: 'PHP 10%';
+	background-color: limegreen;
+	box-shadow: 1px 1px 40px limegreen;
+}
+span:hover::after{
+	opacity: 1;
+}
+@keyframes anime{
+	from{
+		width: 0px;
+	}
+	to{
+		width: 400px;
+	}
+}
